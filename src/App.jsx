@@ -31,33 +31,43 @@ const PROFILE = {
 
 const PROJECTS = [
   {
-    title: "Project Aurora",
-    blurb: "AI-powered note search with semantic embeddings and offline sync.",
-    tags: ["Next.js", "TypeScript", "Pinecone", "Tailwind"],
+    title: "Air Quality Analysis - NYC",
+    blurb: "This project provides a comprehensive analysis of air quality trends in New York City.",
+    tags: ["Python", "Pandas", "matplotlib", "seaborn", "geopandas"],
     img: null,
     links: {
-      live: "https://example.com/aurora",
-      repo: "https://github.com/yourhandle/aurora",
+      live: "https://github.com/tvisham/Air-Quality-Data-Science",
+      repo: "https://github.com/tvisham/Air-Quality-Data-Science",
     },
   },
   {
-    title: "NotDueYet",
-    blurb: "A multi-feature assignment tracker with priorities, calendar view, and subtasks.",
-    tags: ["Vanilla JS", "LocalStorage", "Modular Architecture"],
-    img: null,
+    title: "Golden Nest — Retirement Wizard",
+    blurb: "A retirement planning app that helps you estimate how much you'll need to save for retirement.",
+    tags: ["React", "TypeScript", "Redux", "Tailwind"],
+  img: null,
     links: {
-      live: "https://example.com/notdueyet",
-      repo: "https://github.com/yourhandle/notdueyet",
+      live: "https://github.com/tvisham/golden-nest",
+      repo: "https://github.com/tvisham/golden-nest",
     },
   },
   {
-    title: "CodeBridge Site",
-    blurb: "Landing page and curriculum hub for a student-run coding club.",
-    tags: ["React", "Vite", "Tailwind", "Netlify"],
-    img: null,
+    title: "Gymnasium Rental Website",
+    blurb: "A Gymnasium Rental Website designed to facilitate the booking and management of events.",
+    tags: ["HTML", "CSS", "JavaScript"],
+  img: null,
     links: {
       live: "https://example.com/codebridge",
       repo: "https://github.com/yourhandle/codebridge",
+    },
+  },
+  {
+    title: "not-due-yet",
+    blurb: "A assignment tracker with class management, subtasks, priorities, and calendar view.",
+    tags: ["HTML", "CSS", "JavaScript"],
+  img: null,
+    links: {
+      live: "https://github.com/tvisham/notdueyet",
+      repo: "https://github.com/tvisham/notdueyet",
     },
   },
 ];
@@ -109,9 +119,9 @@ const EXPERIENCE = [
 
 const EDUCATION = [
   {
-    school: "Your High School / University",
-    degree: "B.S. Computer Science & Electrical Engineering (expected)",
-    date: "Class of 2029",
+    school: "Henry < jackson High School",
+    degree: "High School",
+    date: "Class of 2026",
     points: ["GPA 3.9/4.0", "Robotics, Hack Club, Math Team"],
   },
 ];
