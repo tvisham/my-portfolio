@@ -26,6 +26,7 @@ const PROFILE = {
   links: {
     github: "https://github.com/tvisham",
     linkedin: "https://www.linkedin.com/in/tvishamishra/",
+    
   },
 };
 
@@ -34,7 +35,9 @@ const PROJECTS = [
     title: "Air Quality Analysis - NYC",
     blurb: "This project provides a comprehensive analysis of air quality trends in New York City.",
     tags: ["Python", "Pandas", "matplotlib", "seaborn", "geopandas"],
-    img: null,
+  img: "Air-Quality.png",
+    fit: "cover",
+    minW: "min-w-[18rem]",
     links: {
       live: "https://github.com/tvisham/Air-Quality-Data-Science",
       repo: "https://github.com/tvisham/Air-Quality-Data-Science",
@@ -44,7 +47,8 @@ const PROJECTS = [
     title: "Golden Nest — Retirement Wizard",
     blurb: "A retirement planning app that helps you estimate how much you'll need to save for retirement.",
     tags: ["React", "TypeScript", "Redux", "Tailwind"],
-  img: null,
+  img: "Golden-Nest.png",
+  fit: "contain",
     links: {
       live: "https://github.com/tvisham/golden-nest",
       repo: "https://github.com/tvisham/golden-nest",
@@ -64,7 +68,7 @@ const PROJECTS = [
     title: "not-due-yet",
     blurb: "A assignment tracker with class management, subtasks, priorities, and calendar view.",
     tags: ["HTML", "CSS", "JavaScript"],
-  img: null,
+  img: "not-due-yet.png",
     links: {
       live: "https://github.com/tvisham/notdueyet",
       repo: "https://github.com/tvisham/notdueyet",
@@ -119,7 +123,7 @@ const EXPERIENCE = [
 
 const EDUCATION = [
   {
-    school: "Henry < jackson High School",
+    school: "Henry Jackson High School",
     degree: "High School",
     date: "Class of 2026",
     points: ["GPA 3.9/4.0", "Robotics, Hack Club, Math Team"],
@@ -273,6 +277,8 @@ export default function Portfolio() {
             <a className="hover:opacity-80" href="#projects">Projects</a>
             <a className="hover:opacity-80" href="#experience">Experience</a>
             <a className="hover:opacity-80" href="#education">Education</a>
+            <a className="hover:opacity-80" href="#leadership">Leadership</a>
+            <a className="hover:opacity-80" href="#awards">Awards</a>
           </nav>
         </div>
       </header>
@@ -366,28 +372,47 @@ export default function Portfolio() {
             </div>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-            {filtered.map((p) => (
-              <Card key={p.title} className="rounded-3xl overflow-hidden hover:shadow-xl transition-shadow border-slate-700">
-                <CardHeader>
-                  <CardTitle className="flex items-center justify-between">
-                    <span>{p.title}</span>
+          <div className="overflow-x-auto w-full -mx-4 px-4">
+            <div className="flex gap-6 items-stretch snap-x snap-mandatory">
+              {filtered.map((p) => (
+                <div key={p.title} className="flex-shrink-0 w-[20rem] snap-start h-[30rem] md:h-[26rem]">
+                  <Card className="h-full w-full flex flex-col rounded-3xl overflow-hidden transition-shadow border-slate-700 group">
+                <CardHeader className="mb-2 h-20">
+                  <CardTitle className="flex items-center justify-between gap-3">
+                    <span className="text-slate-900 dark:text-slate-100">{p.title}</span>
                   </CardTitle>
-                  <CardDescription className="text-slate-400">{p.blurb}</CardDescription>
+                  <CardDescription className="text-slate-700 dark:text-slate-300">{p.blurb}</CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <div className="aspect-video rounded-xl border border-slate-700 grid place-content-center mb-4">
-                    <span className="text-xs text-slate-500">Add a screenshot here</span>
+                <CardContent className="flex flex-col h-full">
+                  <div className="relative mb-4 rounded-xl border border-slate-700 overflow-hidden flex-1">
+                    {p.img ? (
+                      <img
+                        src={`${import.meta.env.BASE_URL}images/${p.img}`}
+                        alt={p.title}
+                        className={`w-full h-full ${p.fit === 'contain' ? 'object-contain' : 'object-cover'}`}
+                      />
+                    ) : (
+                      <div className="w-full h-full grid place-content-center text-xs text-slate-500">Add a screenshot here</div>
+                    )}
+                    {/* Hover overlay */}
+                    <a href={p.links.repo} target="_blank" rel="noreferrer" className="absolute left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-0 group-hover:bg-opacity-60 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-200 p-3">
+                      View Code
+                    </a>
                   </div>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {p.tags.map((t) => (
                       <Badge key={t} variant="outline" className="rounded-2xl">{t}</Badge>
                     ))}
                   </div>
-                  <div className="flex items-center gap-2">
-                    <a href={p.links.live} target="_blank" rel="noreferrer">
+                  <div className="flex items-center gap-2 mt-auto">
+                      <a href={p.links.live} target="_blank" rel="noreferrer">
                       <Button size="sm" variant="default" className="rounded-2xl">
                         <ExternalLink className="mr-2 size-4"/>Live
+                      </Button>
+                    </a>
+                    <a href="https://www.fox13seattle.com/news/teens-early-financial-literacy-debt" target="_blank" rel="noreferrer">
+                      <Button size="sm" variant="ghost" className="rounded-2xl">
+                        <ExternalLink className="mr-2 size-4"/>Video
                       </Button>
                     </a>
                     <a href={p.links.repo} target="_blank" rel="noreferrer">
@@ -397,8 +422,10 @@ export default function Portfolio() {
                     </a>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+                  </Card>
+                </div>
+              ))}
+            </div>
           </div>
         </Section>
 
@@ -477,7 +504,42 @@ export default function Portfolio() {
           </div>
         </Section>
 
-        <footer className="py-12 text-center text-sm text-slate-500">
+        {/* Links Section */}
+        <Section id="links" title="Links" icon={<ExternalLink className="size-6"/>}>
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Image Card */}
+            <div className="rounded-2xl border border-slate-700 p-5 h-[28rem] md:h-[24rem] flex flex-col">
+              <div className="font-semibold mb-2">Robotics World Championship Winner</div>
+              <p className="text-slate-300 mb-4">Jackson High School team coverage.</p>
+              <div className="flex-1 rounded-lg overflow-hidden">
+                <img src={`${import.meta.env.BASE_URL}images/JHS.png`} alt="JHS Robotics" className="w-full h-full object-cover" />
+              </div>
+            </div>
+
+            {/* Video Card */}
+            <div className="rounded-2xl border border-slate-700 p-5 h-[28rem] md:h-[24rem] flex flex-col">
+              <div className="font-semibold mb-2">Video / Article</div>
++              <p className="text-slate-300 mb-4">Coverage about teen financial literacy.</p>
+              <div className="flex-1 rounded-lg overflow-hidden">
+                <iframe
+                  scrolling="no"
+                  frameBorder="0"
+                  allowFullScreen
+                  src="https://w3.mp.lura.live/player/3.12.16/v3/anvload.html?key=eyJtIjoiVEJELUVQRk9YIiwidiI6IjE2NTk0MTgiLCJ0cmFja1RpbWVQZXJpb2QiOjEsIndpZHRoIjoiMTAwJSIsImFudmFjayI6InA4UTZkVlBsbnBpTDNLbkh2WWlNTkR6YmlsT2c3bzRuIiwic2hhcmVMaW5rIjoiaHR0cHM6Ly93d3cuZm94MTNzZWF0dGxlLmNvbS9uZXdzL3RlZW5zLWVhcmx5LWZpbmFuY2lhbC1saXRlcmFjeS1kZWJ0IiwicGx1Z2lucyI6eyJjdXN0b21Db21zY29yZVBsdWdpbiI6eyJwdWJsaXNoZXJTZWNyZXQiOiJ3ZlVoOFByVFl2WWNHb1gwS3VIWDhnZlNKemFHdGxGMSIsImMzIjoiUTEzIEZPWCBOZXdzIiwiYzYiOiJGVFMiLCJjNCI6bnVsbCwic2V0R2VucmVOYW1lIjoiTmV3cyIsImFwcE5hbWUiOiJGT1ggMTMgU2VhdHRsZSBOZXdzIEFwcCIsInNjcmlwdCI6Imh0dHBzOi8vc3RhdGljLmZveHR2LmNvbS9zdGF0aWMvb3Jpb24vc2NyaXB0cy9jb3JlL3V0aWxzL2NvbXNjb3JlL05hdGl2ZUNvbXNjb3JlUGx1Z2luLmpzIiwic2RrIjoiaHR0cHM6Ly9zdGF0aWMuZm94dHYuY29tL3N0YXRpYy9vcmlvbi9zY3JpcHRzL2NvcmUvdXRpbHMvY29tc2NvcmUvY29tc2NvcmUuanMiLCJjbGllbnRJZCI6IjYwNDI5MDEiLCJuc19zdF9zdCI6IktDUFEiLCJ0aXRsZSI6IlRlYWNoaW5nIGZpbmFuY2lhbCBsaXRlcmFjeSB0byB0aGUgeW91dGgiLCJuc19zdF9jaSI6IjE2NTk0MTgifSwiZGZwIjp7ImNsaWVudFNpZGUiOnsiYWRUYWdVcmwiOiJodHRwczovL3B1YmFkcy5nLmRvdWJsZWNsaWNrLm5ldC9nYW1wYWQvYWRzP2l1PS82Mzc5MDU2NC9rY3BxX2ZveDEzJmRlc2NyaXB0aW9uX3VybD1bcGxhY2Vob2xkZXJdJmVudj12cCZpbXBsPXMmY29ycmVsYXRvcj0mdGZjZD0wJm5wYT0wJmdkZnBfcmVxPTEmb3V0cHV0PXZhc3Qmc3o9MTAwMXgxMDAxJnVudmlld2VkX3Bvc2l0aW9uX3N0YXJ0PTEmY21zaWQ9MjU0MTA0NiZ2aWQ9MTY1OTQxOCIsImtleVZhbHVlcyI6eyJzdHlwZSI6WyJuZXdzIl0sInB0eXBlIjoidmlkZW8tY2xpcCIsImMiOlsibmV3cyJdLCJkIjoid2ViIiwidXNfcHJpdmFjeSI6IjFZTk4ifX19LCJuYXRpdmVIZWFydGJlYXRQbHVnaW4iOnsic2NyaXB0IjoiaHR0cHM6Ly9zdGF0aWMuZm94dHYuY29tL3N0YXRpYy9vcmlvbi9zY3JpcHRzL2NvcmUvdXRpbHMvYWRvYmUvQ3VzdG9tSGVhcnRiZWF0UGx1Z2luLmpzIiwic2RrIjoiaHR0cHM6Ly9hc3NldHMuYWRvYmVkdG0uY29tLzBmNmJmOTA0YjYwOS82ZGRhYjVjMTc0ZTcvbGF1bmNoLWU4MDcxYTA3MTljMS5taW4uanMiLCJhZGRpdGlvbmFsUGFnZU1ldGEiOnsiZml4VmVyc2lvbiI6IjkuOS4yIn0sInBsYXllclVuaXF1ZUlkIjoicGxheWVyLWFkNjNjNjcwLWU5YWUtNDU0Ni1iNDVkLTUwNjdlNzZlYzBmZiJ9fSwiaHRtbDUiOnRydWUsImZvcm1hdCI6Im0zdTgiLCJ0b2tlbiI6ImV5SmhiR2NpT2lKSVV6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS5leUoyYVdRaU9pSXhOalU1TkRFNElpd2lhWE56SWpvaWNEaFJObVJXVUd4dWNHbE1NMHR1U0haWmFVMU9SSHBpYVd4UFp6ZHZORzRpTENKbGVIQWlPakUzTlRrM016UXdNaklzSW1saGRDSTZNVGMxT1Rjek1EUXlNbjAuQURaM3RmS1J5RnhuMnBUZVVDMkZaSTMtVjMxbDZCMkJ0SEpsWnNlRy1mQSJ9"
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+              <div className="mt-4">
+                <a href="https://www.fox13seattle.com/news/teens-early-financial-literacy-debt" target="_blank" rel="noreferrer">
+                  <Button variant="outline">Open Video / Article</Button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </Section>
++
++
++        <footer className="py-12 text-center text-sm text-slate-500">
           <div className="flex justify-center gap-4 mb-3">
             <a className="hover:opacity-80" href={PROFILE.links.github} target="_blank" rel="noreferrer"><Github className="inline size-5"/></a>
             <a className="hover:opacity-80" href={PROFILE.links.linkedin} target="_blank" rel="noreferrer"><Linkedin className="inline size-5"/></a>
