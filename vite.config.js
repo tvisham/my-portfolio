@@ -5,7 +5,9 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/my-portfolio/',
+  // Use relative base so assets are referenced relative to index.html.
+  // This avoids absolute-path issues when GitHub Pages serves the site.
+  base: './',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
