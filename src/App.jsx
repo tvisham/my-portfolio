@@ -85,6 +85,26 @@ const EXPERIENCE = [
 
     ],
   },
+  {
+    org: "Saffron",
+    title: "Data Science Intern",
+    date: "June 2024 - June 2025",
+    points: [
+      "Conducted comprehensive research and data analysis to support the development and optimization of AI models for the telecom industry.",
+      "Executed data cleaning and preprocessing tasks using Python, ensuring high-quality, accurate datasets for model training.",
+      "Mentored new interns, providing guidance in data science methodologies and industry practices.",
+      "Applied advanced data science techniques to tackle complex, real-world challenges.",
+    ],
+  },
+  {
+    org: "Alongside Care",
+    title: "Student Advisor",
+    date: "May 2024 - June 2024",
+    points: [
+      "Advised on product features for a teen mental health app, recommending improvements to enhance engagement and cultural relevance.",
+      "Collaborated with advisors and designers to refine AI chatbot conversations and brainstorm teen-focused app features.",
+    ],
+  },
 ];
 
 const EDUCATION = [
@@ -93,6 +113,107 @@ const EDUCATION = [
     degree: "B.S. Computer Science & Electrical Engineering (expected)",
     date: "Class of 2029",
     points: ["GPA 3.9/4.0", "Robotics, Hack Club, Math Team"],
+  },
+];
+
+const LEADERSHIP = [
+  {
+    org: "FRC Robotics, \u201cJack in the Bot\u201d, Team 2910",
+    role: "Manufacturing Lead & Pit Crew",
+    place: "Jackson High School",
+    date: "Sep. 2022 - Present",
+    points: [
+      "Contributed to the design and construction of a robot that won the FIRST Robotics World Championship out of 3,500 teams, plus multiple district and regional events.",
+      "Oversaw the team pit during competitions, assisting with robot maintenance and presenting to judges and visitors.",
+      "Gained proficiency in prototyping, CAD, fabrication, wiring, systems integration, and use of power tools.",
+      "Created curriculum and mentored new students, fostering technical skills and teamwork.",
+      "Active FIRST program participant for 8 years, strengthening teamwork, technical expertise, and problem-solving skills.",
+    ],
+  },
+  {
+    org: "Future Business Leaders of America, Jackson High School",
+    role: "VP of Operations",
+    date: "Sep. 2022 - Present",
+    points: [
+      "Competed in FBLA Entrepreneurship: 2nd at regionals and 4th at state; qualified for nationals.",
+      "Oversaw fundraising, sponsorship acquisition, and budget creation to reduce member dues and conference costs.",
+      "Managed club communications via Instagram and Remind app, increasing engagement.",
+      "Implemented recruitment strategies increasing membership by 100% (200+ active students).",
+    ],
+  },
+  {
+    org: "DECA / HOWL Finance, Jackson High School",
+    role: "Co-Founder & Leader",
+    date: "Sep. 2022 - Present",
+    points: [
+      "Won 2nd Place in Washington State for Financial Literacy Project; competed internationally.",
+      "Co-created and led a financial literacy initiative educating ~400 elementary students.",
+      "Organized workshops and social campaigns covering employment, insurance, and college prep.",
+    ],
+  },
+  {
+    org: "Girls Who Code, Jackson High School & Online",
+    role: "Vice President",
+    date: "June 2023 - Present",
+    points: [
+      "Mentored middle school students and peers in Java, Python, and Machine Learning.",
+      "Participated in Girls Who Code Summer Immersion Program (Python, Java, AI, Cybersecurity).",
+    ],
+  },
+  {
+    org: "Washington Aerospace Scholars, Museum of Flight",
+    role: "Participant",
+    date: "Nov. 2024 - Present",
+    points: [
+      "Completed lessons on aerospace design, flight technologies, and space exploration.",
+      "Applied aerospace math and science through virtual labs and group projects.",
+    ],
+  },
+  {
+    org: "CodeBridge",
+    role: "President",
+    date: "Sep. 2024 - Present",
+    points: [
+      "Led efforts to establish clubs at four local elementary and middle schools to encourage girls to explore coding.",
+      "Mentored students in Java, Python, and Machine Learning.",
+    ],
+  },
+  {
+    org: "Stop Sexual Assault in Schools (Virtual SASH Club)",
+    role: "Youth Leader",
+    date: "March 2024 - Present",
+    points: [
+      "Built an online platform facilitating global student discussions on sexual assault and gender discrimination in education.",
+      "Produced videos, scripts, and graphics to raise awareness and research-backed reports to inform advocacy.",
+    ],
+  },
+];
+
+const AWARDS = [
+  {
+    title: "First Robotics Competition, Team 2910 (2023-2025)",
+    items: [
+      "2025: Winner - World Championship; Winner - Newton Division; Winner - Sammamish & Auburn District Events",
+      "2025 Awards: Autonomous Award (Sammamish, Auburn); Excellence in Engineering (World Championship)",
+      "2024: Multiple district winners, Indiana Robotics Invitational, PNW Block Party, Chezy Champs; Newton Division finalist at Worlds",
+      "2024 Awards: Quality Award (Glacier Peak); Innovation in Control (PNW District, World Championship Newton Division)",
+      "2023: Multiple district wins and invitational wins",
+      "2023 Awards: Excellence in Engineering; Industrial Design Awards; Autonomous Award",
+    ],
+  },
+  {
+    title: "DECA (2023-2025)",
+    items: [
+      "Financial Literacy Project: 2nd Place State; ICDC (International) competitor",
+      "Entrepreneurship: multiple regional placements and 2x state competitor",
+    ],
+  },
+  {
+    title: "Future Business Leaders of America (2023-2025)",
+    items: [
+      "Entrepreneurship: National Qualifier; 4th Place State; 2nd Place Regional",
+      "Computer Problem Solving, UX Design, Data Analysis, Website Design: multiple regional/state placings",
+    ],
   },
 ];
 
@@ -304,6 +425,44 @@ export default function Portfolio() {
                   </ul>
                 ) : null}
               </div>
+            ))}
+          </div>
+        </Section>
+
+        {/* Leadership */}
+        <Section id="leadership" title="Leadership" icon={<Sparkles className="size-6"/>}>
+          <div className="grid md:grid-cols-2 gap-6">
+            {LEADERSHIP.map((l) => (
+              <Card key={l.org} className="rounded-2xl border-slate-700 p-5">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="font-semibold">{l.org}</div>
+                    <div className="text-sm text-slate-400">{l.role} {l.place ? `• ${l.place}` : ''}</div>
+                  </div>
+                  <div className="text-sm text-slate-400">{l.date}</div>
+                </div>
+                <ul className="mt-3 list-disc pl-5 space-y-1 text-slate-300">
+                  {l.points.map((pt) => <li key={pt}>{pt}</li>)}
+                </ul>
+              </Card>
+            ))}
+          </div>
+        </Section>
+
+        {/* Awards */}
+        <Section id="awards" title="Awards" icon={<Sparkles className="size-6"/>}>
+          <div className="space-y-6">
+            {AWARDS.map((a) => (
+              <Card key={a.title} className="rounded-2xl border-slate-700 p-5">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <div className="font-semibold">{a.title}</div>
+                  </div>
+                </div>
+                <ul className="mt-3 list-disc pl-5 space-y-1 text-slate-300">
+                  {a.items.map((it) => <li key={it}>{it}</li>)}
+                </ul>
+              </Card>
             ))}
           </div>
         </Section>
