@@ -430,10 +430,10 @@ export default function Portfolio() {
         </Section>
 
         {/* Leadership */}
-        <Section id="leadership" title="Leadership" icon={<Sparkles className="size-6"/>}>
+        <Section id="leadership" title="Leadership" icon={<Briefcase className="size-6"/>}>
           <div className="grid md:grid-cols-2 gap-6">
             {LEADERSHIP.map((l) => (
-              <Card key={l.org} className="rounded-2xl border-slate-700 p-5">
+              <div key={l.org} className="rounded-2xl border border-slate-700 p-5">
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="font-semibold">{l.org}</div>
@@ -444,16 +444,16 @@ export default function Portfolio() {
                 <ul className="mt-3 list-disc pl-5 space-y-1 text-slate-300">
                   {l.points.map((pt) => <li key={pt}>{pt}</li>)}
                 </ul>
-              </Card>
+              </div>
             ))}
           </div>
         </Section>
 
         {/* Awards */}
         <Section id="awards" title="Awards" icon={<Sparkles className="size-6"/>}>
-          <div className="space-y-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {AWARDS.map((a) => (
-              <Card key={a.title} className="rounded-2xl border-slate-700 p-5">
+              <div key={a.title} className="rounded-2xl border border-slate-700 p-5">
                 <div className="flex items-start justify-between">
                   <div>
                     <div className="font-semibold">{a.title}</div>
@@ -462,7 +462,7 @@ export default function Portfolio() {
                 <ul className="mt-3 list-disc pl-5 space-y-1 text-slate-300">
                   {a.items.map((it) => <li key={it}>{it}</li>)}
                 </ul>
-              </Card>
+              </div>
             ))}
           </div>
         </Section>
