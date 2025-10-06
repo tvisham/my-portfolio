@@ -56,8 +56,8 @@ const PROJECTS = [
     tags: ["HTML", "CSS", "JavaScript"],
   img: null,
     links: {
-      live: "https://example.com/codebridge",
-      repo: "https://github.com/yourhandle/codebridge",
+      live: "https://github.com/tvisham/Gymnasium-Rental-Website",
+      repo: "https://github.com/tvisham/Gymnasium-Rental-Website",
     },
   },
   {
@@ -78,9 +78,9 @@ const EXPERIENCE = [
     title: "Engineering Intern",
     date: "Summer 2025",
     points: [
-      "Built a platform for restaurants to manage insights and ordering.",
-      "Collaborated with a team of six; shipped features to production.",
-      "Reduced order processing time by 23% via queue optimization.",
+      "One of 140 students selected to intern with Boeing and PDS defence at the Core Plus Aerospace Manufacturing Internship.",
+      "Trained in mechanical and electrical assembly, quality assurance, and safety protocols.",
+      "Learnt building skin modules for the plane and applied problem solving skills as part of team challenge to expedite the supply chain.",
     ],
   },
   {
