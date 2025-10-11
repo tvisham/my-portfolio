@@ -16,13 +16,12 @@ import {
   Sparkles,
 } from "lucide-react";
 
-// ---------- Replace these with your real details ----------
 const PROFILE = {
   name: "Tvisha Mishra",
-  role: "High School Senior • Aspiring ?",
+  role: "High School Senior • Aspiring Innovator",
   location: "Bothell, WA",
   email: "tvisha0913@outlook.com",
-  bio: `Bio about me`,
+  bio: `Curiosity-driven student passionate about turning complex questions into human-centered solutions.`,
   links: {
     github: "https://github.com/tvisham",
     linkedin: "https://www.linkedin.com/in/tvishamishra/",
@@ -82,9 +81,10 @@ const EXPERIENCE = [
     title: "Engineering Intern",
     date: "Summer 2025",
     points: [
-      "One of 140 students selected to intern with Boeing and PDS defence at the Core Plus Aerospace Manufacturing Internship.",
-      "Trained in mechanical and electrical assembly, quality assurance, and safety protocols.",
-      "Learnt building skin modules for the plane and applied problem solving skills as part of team challenge to expedite the supply chain.",
+      "Applied mechanical and electrical engineering principles through hands-on work with industrial machinery.",
+      "Used Boeing’s Problem Solving Model to improve manufacturing workflows and quality control.",
+      "Gained exposure to industry best practices, including workflow optimization, safety standards, and collaborative engineering strategies.",
+      "Delivered an independent capstone project and contributed to a team problem-solving challenge, integrating theoretical knowledge with practical solutions.",
     ],
   },
   {
@@ -92,11 +92,9 @@ const EXPERIENCE = [
     title: "Software Engineering Intern",
     date: "Summer 2024",
     points: [
-      "Designed and developed a restaurant billing and customer insights app to support small businesses post-COVID.",
-      "Configured CI/CD pipelines in Azure DevOps to streamline workflows and automate deployments.",
-      "Utilized SQL for data manipulation and analysis to improve billing and insights functionality.",
-      "Implemented Generative AI and language models to enhance app features and user experience.",
-
+      "Designed and developed a restaurant billing & customer insights app with a team of 4, addressing post-COVID small business challenges.",
+      "Coordinated a cross-functional development team and delivered a strategic pitch and live demo to company executives, showcasing an AI-powered chatbot designed to personalize customer experiences and drive post-pandemic business recovery.",
+      "Configured CI/CD pipelines in Azure DevOps and contributed to data engineering using SQL. Implemented Generative AI and language models to enhance app functionality, billing insights, and user experience.",
     ],
   },
   {
@@ -130,7 +128,7 @@ const EDUCATION = [
   },
 ];
 
-const LEADERSHIP = [
+const ACTIVITIES = [
   {
     org: "FRC Robotics, \u201cJack in the Bot\u201d, Team 2910",
     role: "Manufacturing Lead & Pit Crew",
