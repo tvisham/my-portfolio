@@ -96,7 +96,7 @@ const PROJECTS = [
     },
   },
   {
-    title: "ML Algorithm for a Vacuum Robot based on chnages in environmental conditions and battery efficiency",
+    title: "ML Algorithm for a Vacuum Robot based on changes in environmental conditions and battery efficiency",
     blurb: "Research project applying ML to battery and environmental data.",
     tags: ["Machine Learning", "Azure", "Python", "Robotics"],
     img: null,
@@ -166,7 +166,20 @@ const EDUCATION = [
     degree: "High School",
     date: "Class of 2026",
     points: ["GPA 3.995/4.0","AP Scholar with Distinction (2024 & 2025), AP Capstone Diploma"],
-    dualEnrollment: "CASCADIA COMMUNITY COLLEGE  with Relevant Coursework:Programming Data Structures, Web Authoring, Calculus 3, Structures & Algorithms",
+  },
+  {
+    school: "SAT",
+    degree: "Score",
+    date: "",
+    points: ["SAT: 1560 (Math: 790; R&W: 770)"],
+  },
+  {
+    school: "Cascadia Community College",
+    degree: "Dual Enrollment",
+    date: "Sep 2025 – Jun 2026",
+    points: [
+      "Relevant Coursework: Programming Data Structures, Web Authoring, Calculus 3, Structures & Algorithms",
+    ],
   },
 ];
 
