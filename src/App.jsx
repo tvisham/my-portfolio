@@ -104,6 +104,7 @@ const EXPERIENCE = [
     date: "Summer 2025",
     points: [
       "One of 93 students chosen nationwide with Boeing and PDS defence at the Core Plus Aerospace Manufacturing Internship.",
+      "Applied mechanical and electrical engineering principles through hands-on work with industrial machinery.",
       "Used Boeing’s Problem Solving Model to improve manufacturing workflows and quality control.",
       "Gained exposure to industry best practices, including workflow optimization, safety standards, and collaborative engineering strategies.",
       "Delivered an independent capstone project and contributed to a team problem-solving challenge, integrating theoretical knowledge with practical solutions.",
@@ -117,7 +118,7 @@ const EXPERIENCE = [
       "Designed and developed a restaurant billing & customer insights app with a team of 4, addressing post-COVID small business challenges.",
       "Coordinated a cross-functional development team and delivered a strategic pitch and live demo to company executives, showcasing an AI-powered chatbot designed to personalize customer experiences and drive post-pandemic business recovery.",
       "Utilized SQL for data manipulation and analysis to improve billing and insights functionality.",
-      "Configured CI/CD pipelines in Azure DevOps and contributed to data engineering using SQL",
+      "Configured CI/CD pipelines in Azure DevOps and contributed to data engineering using SQL.",
       "Leveraged Generative AI and language models to enhance app functionality, billing insights, and user experience.",
 
     ],
