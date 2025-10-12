@@ -16,13 +16,12 @@ import {
   Sparkles,
 } from "lucide-react";
 
-// ---------- Replace these with your real details ----------
 const PROFILE = {
   name: "Tvisha Mishra",
-  role: "High School Senior • Aspiring ?",
+  role: "High School Senior • Aspiring Innovator",
   location: "Bothell, WA",
   email: "tvisha0913@outlook.com",
-  bio: `Bio about me`,
+  bio: `Curiosity-driven student passionate about turning complex questions into human-centered solutions.`,
   links: {
     github: "https://github.com/tvisham",
     linkedin: "https://www.linkedin.com/in/tvishamishra/",
@@ -82,7 +81,11 @@ const EXPERIENCE = [
     title: "Engineering Intern",
     date: "Summer 2025",
     points: [
+<<<<<<< HEAD
       "One of 93 students chosen nationwide with Boeing and PDS defence at the Core Plus Aerospace Manufacturing Internship.",
+=======
+      "Applied mechanical and electrical engineering principles through hands-on work with industrial machinery.",
+>>>>>>> 53592ac5b43b9c01852d45eb0ab0405bc86b555d
       "Used Boeing’s Problem Solving Model to improve manufacturing workflows and quality control.",
       "Gained exposure to industry best practices, including workflow optimization, safety standards, and collaborative engineering strategies.",
       "Delivered an independent capstone project and contributed to a team problem-solving challenge, integrating theoretical knowledge with practical solutions.",
@@ -95,10 +98,14 @@ const EXPERIENCE = [
     points: [
       "Designed and developed a restaurant billing & customer insights app with a team of 4, addressing post-COVID small business challenges.",
       "Coordinated a cross-functional development team and delivered a strategic pitch and live demo to company executives, showcasing an AI-powered chatbot designed to personalize customer experiences and drive post-pandemic business recovery.",
+<<<<<<< HEAD
       "Utilized SQL for data manipulation and analysis to improve billing and insights functionality.",
       "Configured CI/CD pipelines in Azure DevOps and contributed to data engineering using SQL",
       "Leveraged Generative AI and language models to enhance app functionality, billing insights, and user experience.",
 
+=======
+      "Configured CI/CD pipelines in Azure DevOps and contributed to data engineering using SQL. Implemented Generative AI and language models to enhance app functionality, billing insights, and user experience.",
+>>>>>>> 53592ac5b43b9c01852d45eb0ab0405bc86b555d
     ],
   },
   {
@@ -133,7 +140,7 @@ const EDUCATION = [
   },
 ];
 
-const LEADERSHIP = [
+const ACTIVITIES = [
   {
     org: "FRC Robotics, \u201cJack in the Bot\u201d, Team 2910",
     role: "Manufacturing Lead & Pit Crew",
