@@ -184,9 +184,12 @@ const ACTIVITIES = [
     role: "Co-Founder & Leader",
     date: "Sep. 2022 - Present",
     points: [
-      "Won 2nd Place in Washington State for Financial Literacy Project; competed internationally.",
-      "Co-created and led a financial literacy initiative educating ~400 elementary students.",
+      "Secured 2nd place in Washington State for a Financial Literacy Project, qualifying to compete at an international conference.",
+      "Educated 400+ elementary and high school students on money management, covering earning, spending, saving, investing, credit, and risk.",
       "Organized workshops and social campaigns covering employment, insurance, and college prep.",
+      "Initiated, contributed to the curriculum, and led discussions within the school district to establish a personal financial literacy course.",
+      "Featured in FOX 13 to promote financial literacy: https://www.fox13seattle.com/news/teens-early-financial-literacy-debt.",
+      "Organized interactive workshops and developed social media campaigns, gaining 20,000+ impressions.",
     ],
   },
   {
@@ -195,7 +198,9 @@ const ACTIVITIES = [
     date: "June 2023 - Present",
     points: [
       "Mentored middle school students and peers in Java, Python, and Machine Learning.",
-      "Participated in Girls Who Code Summer Immersion Program (Python, Java, AI, Cybersecurity).",
+      "Mentored peers in coding and project development, fostering leadership, collaboration, and technical proficiency.",
+      "Led planning and execution of workshops, industry field trips, speaker events, and hackathons, coordinating logistics and engaging participants across diverse STEM topics.",
+      "Built connections with industry professionals to bring real-world insights into events and strengthen student learning experiences.",
     ],
   },
   {
@@ -205,6 +210,7 @@ const ACTIVITIES = [
     points: [
       "Completed lessons on aerospace design, flight technologies, and space exploration.",
       "Applied aerospace math and science through virtual labs and group projects.",
+      "Collaborated with peers to solve real-world engineering challenges, strengthening problem-solving and teamwork skills in aerospace and STEM contexts.",
     ],
   },
   {
@@ -212,8 +218,10 @@ const ACTIVITIES = [
     role: "President",
     date: "Sep. 2024 - Present",
     points: [
-      "Led efforts to establish clubs at four local elementary and middle schools to encourage girls to explore coding.",
-      "Mentored students in Java, Python, and Machine Learning.",
+      "Launched coding programs across four schools, expanding access to computer science education for grades 4–8.",
+      "Recruited, trained, and supervised volunteer teams, ensuring smooth program delivery and consistent student support",
+      "Developed and taught curricula in Java and Python, educating 150+ students in programming fundamentals and algorithmic thinking.",
+      "Organized hands-on lessons, projects, and mentoring, fostering student interest in STEM and building long-term engagement in coding."
     ],
   },
   {
