@@ -95,6 +95,21 @@ const PROJECTS = [
       repo: "https://github.com/tvisham/ask-me-anything",
     },
   },
+  {
+    title: "ML Algorithm for a Vacuum Robot based on chnages in environmental conditions and battery efficiency",
+    blurb: "Research project applying ML to battery and environmental data.",
+    tags: ["Machine Learning", "Azure", "Python", "Robotics"],
+    img: null,
+    details: [
+      "Developed a machine learning algorithm using Azure Machine Learning and Python to detect changes in environmental conditions based on battery efficiency in vacuum robots.",
+      "Analyzed correlations and identified patterns between fluctuations in battery performance and environmental factors such as temperature or terrain.",
+      "Presented findings in a research paper, detailing the algorithm's potential applications and insights in robotics and environmental monitoring.",
+    ],
+    links: {
+      live: "",
+      repo: "",
+    },
+  },
 ];
 
 const EXPERIENCE = [
