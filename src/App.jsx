@@ -221,8 +221,9 @@ const ACTIVITIES = [
     role: "Youth Leader",
     date: "March 2024 - Present",
     points: [
-      "Built an online platform facilitating global student discussions on sexual assault and gender discrimination in education.",
-      "Produced videos, scripts, and graphics to raise awareness and research-backed reports to inform advocacy.",
+      "Founded an online platform (Virtual SASH Club—a Students Against Sexual Harassment Club), facilitating discussions for students globally on sexual assault, sexual harassment, and gender discrimination in educational settings",
+      "Conducted in-depth research and developed detailed reports on crucial topics, ensuring the right to an equal education is not compromised by sexual misconduct, sexual assault, and gender discrimination in school.",
+      "Produced videos, scripts, and graphics to raise awareness and research-backed reports to inform advocacyProduced engaging content, including videos, scripts, and graphics for social media to raise awareness about sexual assault.",
     ],
   },
 ];
