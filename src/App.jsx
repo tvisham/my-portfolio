@@ -1,7 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "./components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "./components/ui/card";
 import { Badge } from "./components/ui/badge";
 import {
   Github,
@@ -32,11 +31,10 @@ const PROFILE = {
 const PROJECTS = [
   {
     title: "Air Quality Analysis - NYC",
-    blurb: "This project provides a comprehensive analysis of air quality trends in New York City.",
+    blurb: "Acomprehensive analysis of air quality trends in New York City.",
     tags: ["Python", "Pandas", "matplotlib", "seaborn", "geopandas"],
-  img: "Air-Quality.png",
+    img: "Air-Quality.png",
     fit: "cover",
-    minW: "min-w-[18rem]",
     links: {
       live: "https://github.com/tvisham/Air-Quality-Data-Science",
       repo: "https://github.com/tvisham/Air-Quality-Data-Science",
@@ -46,8 +44,8 @@ const PROJECTS = [
     title: "Golden Nest — Retirement Wizard",
     blurb: "A retirement planning app that helps you estimate how much you'll need to save for retirement.",
     tags: ["React", "TypeScript", "Redux", "Tailwind"],
-  img: "Golden-Nest.png",
-  fit: "contain",
+    img: "Golden-Nest.png",
+    fit: "cover",
     links: {
       live: "https://github.com/tvisham/golden-nest",
       repo: "https://github.com/tvisham/golden-nest",
@@ -57,7 +55,8 @@ const PROJECTS = [
     title: "Gymnasium Rental Website",
     blurb: "A Gymnasium Rental Website designed to facilitate the booking and management of events.",
     tags: ["HTML", "CSS", "JavaScript"],
-  img: null,
+    img: null,
+    fit: "cover",
     links: {
       live: "https://github.com/tvisham/Gymnasium-Rental-Website",
       repo: "https://github.com/tvisham/Gymnasium-Rental-Website",
@@ -67,10 +66,33 @@ const PROJECTS = [
     title: "not-due-yet",
     blurb: "A assignment tracker with class management, subtasks, priorities, and calendar view.",
     tags: ["HTML", "CSS", "JavaScript"],
-  img: "not-due-yet.png",
+    img: "not-due-yet.png",
+    fit: "cover",
     links: {
       live: "https://github.com/tvisham/notdueyet",
       repo: "https://github.com/tvisham/notdueyet",
+    },
+  },
+  {
+    title: "Mario Game",
+    blurb: "A fun and interactive Mario game built with Python",
+    tags: ["Python", "Pygame","pytmx"],
+    img: null,
+    fit: "cover",
+    links: {
+      live: "https://github.com/tvisham/mario-in-python",
+      repo: "https://github.com/tvisham/mario-in-python",
+    },
+  },
+  {
+    title: "Ask Me Anything",
+    blurb: "A chat-bot with interative front-end and back-end",
+    tags: [, "JavaScript", "React", "Node.js"],
+    img: null,
+    fit: "cover",
+    links: {
+      live: "https://github.com/tvisham/ask-me-anything",
+      repo: "https://github.com/tvisham/ask-me-anything",
     },
   },
 ];
@@ -81,11 +103,7 @@ const EXPERIENCE = [
     title: "Engineering Intern",
     date: "Summer 2025",
     points: [
-<<<<<<< HEAD
       "One of 93 students chosen nationwide with Boeing and PDS defence at the Core Plus Aerospace Manufacturing Internship.",
-=======
-      "Applied mechanical and electrical engineering principles through hands-on work with industrial machinery.",
->>>>>>> 53592ac5b43b9c01852d45eb0ab0405bc86b555d
       "Used Boeing’s Problem Solving Model to improve manufacturing workflows and quality control.",
       "Gained exposure to industry best practices, including workflow optimization, safety standards, and collaborative engineering strategies.",
       "Delivered an independent capstone project and contributed to a team problem-solving challenge, integrating theoretical knowledge with practical solutions.",
@@ -98,14 +116,10 @@ const EXPERIENCE = [
     points: [
       "Designed and developed a restaurant billing & customer insights app with a team of 4, addressing post-COVID small business challenges.",
       "Coordinated a cross-functional development team and delivered a strategic pitch and live demo to company executives, showcasing an AI-powered chatbot designed to personalize customer experiences and drive post-pandemic business recovery.",
-<<<<<<< HEAD
       "Utilized SQL for data manipulation and analysis to improve billing and insights functionality.",
       "Configured CI/CD pipelines in Azure DevOps and contributed to data engineering using SQL",
       "Leveraged Generative AI and language models to enhance app functionality, billing insights, and user experience.",
 
-=======
-      "Configured CI/CD pipelines in Azure DevOps and contributed to data engineering using SQL. Implemented Generative AI and language models to enhance app functionality, billing insights, and user experience.",
->>>>>>> 53592ac5b43b9c01852d45eb0ab0405bc86b555d
     ],
   },
   {
@@ -239,7 +253,7 @@ const AWARDS = [
       "Computer Problem Solving, UX Design, Data Analysis, Website Design: multiple regional/state placings",
       "UX Design: 2x 1st Place Regional, 8th Place State", 
       "Data Analysis: 2nd Place Regional, State Competitor", 
-      "Website Design: 3rd Place Regional, State Competitor",,
+      "Website Design: 3rd Place Regional, State Competitor",
     ],
   },
 ];
@@ -314,15 +328,22 @@ export default function Portfolio() {
             <p className="mt-4 text-slate-300 max-w-prose">
               {PROFILE.bio}
             </p>
-            <div className="mt-6 flex flex-wrap items-center gap-3">
-              <a href={PROFILE.links.github} target="_blank" rel="noreferrer">
-                <Button variant="secondary" className="rounded-2xl"><Github className="mr-2 size-4"/>GitHub</Button>
+            <div className="mt-8 flex gap-4">
+              <a
+                href={PROFILE.links.github}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center px-6 py-3 text-base font-semibold rounded-xl bg-[#181717] text-white shadow-lg hover:bg-[#24292f] hover:scale-105 transition-transform duration-200"
+              >
+                <Github className="mr-2 size-5" /> GitHub
               </a>
-              <a href={PROFILE.links.linkedin} target="_blank" rel="noreferrer">
-                <Button variant="secondary" className="rounded-2xl"><Linkedin className="mr-2 size-4"/>LinkedIn</Button>
-              </a>
-              <a href={`mailto:${PROFILE.email}`}>
-                <Button className="rounded-2xl"><Mail className="mr-2 size-4"/>Email Me</Button>
+              <a
+                href={PROFILE.links.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center px-6 py-3 text-base font-semibold rounded-xl bg-[#181717] text-white shadow-lg hover:bg-[#24292f] hover:scale-105 transition-transform duration-200"
+              >
+                <Linkedin className="mr-2 size-5" /> LinkedIn
               </a>
             </div>
             <div className="mt-6 flex items-center gap-2 text-sm text-slate-400">
@@ -345,18 +366,6 @@ export default function Portfolio() {
                     <div className="text-lg font-semibold">{PROFILE.name}</div>
                     <div className="text-sm text-slate-400">{PROFILE.role}</div>
                   </div>
-                </div>
-                <div className="mt-6 grid grid-cols-3 gap-3">
-                  {[
-                    { label: "Frontend", Icon: Code2 },
-                    { label: "Launch", Icon: Rocket },
-                    { label: "Work", Icon: Briefcase },
-                  ].map(({ label, Icon }) => (
-                    <div key={label} className="rounded-xl border border-slate-700 p-3 text-center">
-                      <Icon className="mx-auto mb-1 size-5" />
-                      <div className="text-xs text-slate-400">{label}</div>
-                    </div>
-                  ))}
                 </div>
               </div>
             </motion.div>
@@ -386,56 +395,64 @@ export default function Portfolio() {
           </div>
 
           <div className="overflow-x-auto w-full -mx-4 px-4">
-            <div className="flex gap-6 items-stretch snap-x snap-mandatory">
+            <div className="flex gap-8 items-stretch snap-x snap-mandatory">
               {filtered.map((p) => (
-                <div key={p.title} className="flex-shrink-0 w-[20rem] snap-start h-[30rem] md:h-[26rem]">
-                  <Card className="h-full w-full flex flex-col rounded-3xl overflow-hidden transition-shadow border-slate-700 group">
-                <CardHeader className="mb-2 h-20">
-                  <CardTitle className="flex items-center justify-between gap-3">
-                    <span className="text-slate-900 dark:text-slate-100">{p.title}</span>
-                  </CardTitle>
-                  <CardDescription className="text-slate-700 dark:text-slate-300">{p.blurb}</CardDescription>
-                </CardHeader>
-                <CardContent className="flex flex-col h-full">
-                  <div className="relative mb-4 rounded-xl border border-slate-700 overflow-hidden flex-1">
-                    {p.img ? (
-                      <img
-                        src={`${import.meta.env.BASE_URL}images/${p.img}`}
-                        alt={p.title}
-                        className={`w-full h-full ${p.fit === 'contain' ? 'object-contain' : 'object-cover'}`}
-                      />
-                    ) : (
-                      <div className="w-full h-full grid place-content-center text-xs text-slate-500">Add a screenshot here</div>
-                    )}
-                    {/* Hover overlay */}
-                    <a href={p.links.repo} target="_blank" rel="noreferrer" className="absolute left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-0 group-hover:bg-opacity-60 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-200 p-3">
-                      View Code
-                    </a>
+                <div key={p.title} className="flex-shrink-0 w-[22rem] h-[32rem] snap-start">
+                  <div className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-6 h-full flex flex-col transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:shadow-2xl hover:shadow-indigo-500/10 hover:-translate-y-1">
+                    {/* Image Section */}
+                    <div className="relative mb-6 rounded-2xl overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900">
+                      {p.img ? (
+                        <div className="aspect-[16/10] relative">
+                          <img
+                            src={`${import.meta.env.BASE_URL}images/${p.img}`}
+                            alt={p.title}
+                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        </div>
+                      ) : (
+                        <div className="aspect-[16/10] flex items-center justify-center">
+                          <div className="text-center text-slate-500">
+                            <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-slate-700/50 flex items-center justify-center">
+                              <ExternalLink className="w-8 h-8" />
+                            </div>
+                            <p className="text-sm font-medium">Project Screenshot</p>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Content Section - flex column, justify-between */}
+                    <div className="flex flex-col flex-grow justify-between">
+                      <div>
+                        <h3 className="text-xl font-semibold text-white mb-2 leading-tight">{p.title}</h3>
+                        <p className="text-slate-400 text-sm leading-relaxed">{p.blurb}</p>
+                      </div>
+                      <div className="mt-auto">
+                        <div className="flex flex-wrap gap-2 mb-4 justify-center">
+                          {p.tags.map((tag) => (
+                            <span
+                              key={tag}
+                              className="px-3 py-1 text-xs font-medium bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 rounded-full"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                        <div className="flex">
+                          <a
+                            href={p.links.repo}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="flex-1 inline-flex items-center justify-center px-4 py-2.5 text-sm font-semibold text-white bg-[#181717] hover:bg-[#24292f] rounded-xl transition-colors duration-200"
+                          >
+                            <Github className="w-4 h-4 mr-2" />
+                            Code
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {p.tags.map((t) => (
-                      <Badge key={t} variant="outline" className="rounded-2xl">{t}</Badge>
-                    ))}
-                  </div>
-                  <div className="flex items-center gap-2 mt-auto">
-                      <a href={p.links.live} target="_blank" rel="noreferrer">
-                      <Button size="sm" variant="default" className="rounded-2xl">
-                        <ExternalLink className="mr-2 size-4"/>Live
-                      </Button>
-                    </a>
-                    <a href="https://www.fox13seattle.com/news/teens-early-financial-literacy-debt" target="_blank" rel="noreferrer">
-                      <Button size="sm" variant="ghost" className="rounded-2xl">
-                        <ExternalLink className="mr-2 size-4"/>Video
-                      </Button>
-                    </a>
-                    <a href={p.links.repo} target="_blank" rel="noreferrer">
-                      <Button size="sm" variant="secondary" className="rounded-2xl">
-                        <Github className="mr-2 size-4"/>Code
-                      </Button>
-                    </a>
-                  </div>
-                </CardContent>
-                  </Card>
                 </div>
               ))}
             </div>
@@ -482,7 +499,7 @@ export default function Portfolio() {
         {/* Leadership */}
         <Section id="leadership" title="Leadership" icon={<Briefcase className="size-6"/>}>
           <div className="grid md:grid-cols-2 gap-6">
-            {LEADERSHIP.map((l) => (
+            {ACTIVITIES.map((l) => (
               <div key={l.org} className="rounded-2xl border border-slate-700 p-5">
                 <div className="flex items-center justify-between">
                   <div>
