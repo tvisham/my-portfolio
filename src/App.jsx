@@ -82,9 +82,10 @@ const EXPERIENCE = [
     title: "Engineering Intern",
     date: "Summer 2025",
     points: [
-      "One of 140 students selected to intern with Boeing and PDS defence at the Core Plus Aerospace Manufacturing Internship.",
-      "Trained in mechanical and electrical assembly, quality assurance, and safety protocols.",
-      "Learnt building skin modules for the plane and applied problem solving skills as part of team challenge to expedite the supply chain.",
+      "One of 93 students chosen nationwide with Boeing and PDS defence at the Core Plus Aerospace Manufacturing Internship.",
+      "Used Boeing’s Problem Solving Model to improve manufacturing workflows and quality control.",
+      "Gained exposure to industry best practices, including workflow optimization, safety standards, and collaborative engineering strategies.",
+      "Delivered an independent capstone project and contributed to a team problem-solving challenge, integrating theoretical knowledge with practical solutions.",
     ],
   },
   {
@@ -92,10 +93,11 @@ const EXPERIENCE = [
     title: "Software Engineering Intern",
     date: "Summer 2024",
     points: [
-      "Designed and developed a restaurant billing and customer insights app to support small businesses post-COVID.",
-      "Configured CI/CD pipelines in Azure DevOps to streamline workflows and automate deployments.",
+      "Designed and developed a restaurant billing & customer insights app with a team of 4, addressing post-COVID small business challenges.",
+      "Coordinated a cross-functional development team and delivered a strategic pitch and live demo to company executives, showcasing an AI-powered chatbot designed to personalize customer experiences and drive post-pandemic business recovery.",
       "Utilized SQL for data manipulation and analysis to improve billing and insights functionality.",
-      "Implemented Generative AI and language models to enhance app features and user experience.",
+      "Configured CI/CD pipelines in Azure DevOps and contributed to data engineering using SQL",
+      "Leveraged Generative AI and language models to enhance app functionality, billing insights, and user experience.",
 
     ],
   },
@@ -126,7 +128,8 @@ const EDUCATION = [
     school: "Henry Jackson High School",
     degree: "High School",
     date: "Class of 2026",
-    points: ["GPA 3.9/4.0", "Robotics, Hack Club, Math Team"],
+    points: ["GPA 3.995/4.0","AP Scholar with Distinction (2024 & 2025), AP Capstone Diploma"],
+    dualEnrollment: "CASCADIA COMMUNITY COLLEGE  with Relevant Coursework:Programming Data Structures, Web Authoring, Calculus 3, Structures & Algorithms",
   },
 ];
 
@@ -218,7 +221,7 @@ const AWARDS = [
   {
     title: "DECA (2023-2025)",
     items: [
-      "Financial Literacy Project: 2nd Place State; ICDC (International) competitor",
+      "Financial Literacy Project: ICDC (International) competitor,2nd Place State; ",
       "Entrepreneurship: multiple regional placements and 2x state competitor",
     ],
   },
@@ -227,6 +230,9 @@ const AWARDS = [
     items: [
       "Entrepreneurship: National Qualifier; 4th Place State; 2nd Place Regional",
       "Computer Problem Solving, UX Design, Data Analysis, Website Design: multiple regional/state placings",
+      "UX Design: 2x 1st Place Regional, 8th Place State", 
+      "Data Analysis: 2nd Place Regional, State Competitor", 
+      "Website Design: 3rd Place Regional, State Competitor",,
     ],
   },
 ];
