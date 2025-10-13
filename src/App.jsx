@@ -41,17 +41,6 @@ const PROJECTS = [
     },
   },
   {
-    title: "Golden Nest — Retirement Wizard",
-    blurb: "A retirement planning app that helps you estimate how much you'll need to save for retirement.",
-    tags: ["React", "TypeScript", "Redux", "Tailwind"],
-    img: "Golden-Nest.png",
-    fit: "cover",
-    links: {
-      live: "https://github.com/tvisham/golden-nest",
-      repo: "https://github.com/tvisham/golden-nest",
-    },
-  },
-  {
     title: "Gymnasium Rental Website",
     blurb: "A Gymnasium Rental Website designed to facilitate the booking and management of events.",
     tags: ["HTML", "CSS", "JavaScript"],
@@ -73,41 +62,15 @@ const PROJECTS = [
       repo: "https://github.com/tvisham/notdueyet",
     },
   },
-  {
-    title: "Mario Game",
-    blurb: "A fun and interactive Mario game built with Python",
-    tags: ["Python", "Pygame","pytmx"],
-    img: null,
+    {
+    title: "Golden Nest — Retirement Wizard",
+    blurb: "A retirement planning app that helps you estimate how much you'll need to save for retirement.",
+    tags: ["React", "TypeScript", "Redux", "Tailwind"],
+    img: "Golden-Nest.png",
     fit: "cover",
     links: {
-      live: "https://github.com/tvisham/mario-in-python",
-      repo: "https://github.com/tvisham/mario-in-python",
-    },
-  },
-  {
-    title: "Ask Me Anything",
-    blurb: "A chat-bot with interative front-end and back-end",
-    tags: [, "JavaScript", "React", "Node.js"],
-    img: null,
-    fit: "cover",
-    links: {
-      live: "https://github.com/tvisham/ask-me-anything",
-      repo: "https://github.com/tvisham/ask-me-anything",
-    },
-  },
-  {
-    title: "ML Algorithm for a Vacuum Robot based on changes in environmental conditions and battery efficiency",
-    blurb: "Research project applying ML to battery and environmental data.",
-    tags: ["Machine Learning", "Azure", "Python", "Robotics"],
-    img: null,
-    details: [
-      "Developed a machine learning algorithm using Azure Machine Learning and Python to detect changes in environmental conditions based on battery efficiency in vacuum robots.",
-      "Analyzed correlations and identified patterns between fluctuations in battery performance and environmental factors such as temperature or terrain.",
-      "Presented findings in a research paper, detailing the algorithm's potential applications and insights in robotics and environmental monitoring.",
-    ],
-    links: {
-      live: "",
-      repo: "",
+      live: "https://github.com/tvisham/golden-nest",
+      repo: "https://github.com/tvisham/golden-nest",
     },
   },
 ];
@@ -118,7 +81,6 @@ const EXPERIENCE = [
     title: "Engineering Intern",
     date: "Summer 2025",
     points: [
-      "One of 93 students chosen nationwide with Boeing and PDS defence at the Core Plus Aerospace Manufacturing Internship.",
       "Applied mechanical and electrical engineering principles through hands-on work with industrial machinery.",
       "Used Boeing’s Problem Solving Model to improve manufacturing workflows and quality control.",
       "Gained exposure to industry best practices, including workflow optimization, safety standards, and collaborative engineering strategies.",
