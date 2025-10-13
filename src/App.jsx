@@ -55,7 +55,7 @@ const PROJECTS = [
     title: "Gymnasium Rental Website",
     blurb: "A Gymnasium Rental Website designed to facilitate the booking and management of events.",
     tags: ["HTML", "CSS", "JavaScript"],
-    img: null,
+    img: "JHS Gymnasium.png",
     fit: "cover",
     links: {
       live: "https://github.com/tvisham/Gymnasium-Rental-Website",
@@ -77,7 +77,7 @@ const PROJECTS = [
     title: "Mario Game",
     blurb: "A fun and interactive Mario game built with Python",
     tags: ["Python", "Pygame","pytmx"],
-    img: null,
+    img: "Mario.png",
     fit: "cover",
     links: {
       live: "https://github.com/tvisham/mario-in-python",
@@ -356,10 +356,7 @@ export default function Portfolio() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <div>
-            <div className="inline-flex items-center gap-2 text-xs px-3 py-1 rounded-full bg-slate-800 border border-slate-700 mb-4">
-              <Sparkles className="size-3" /> Available for internships
-            </div>
+            <div>
             <h1 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
               {PROFILE.role}
             </h1>
@@ -387,7 +384,7 @@ export default function Portfolio() {
             <div className="mt-6 flex items-center gap-2 text-sm text-slate-400">
               <MapPin className="size-4"/>{PROFILE.location}
             </div>
-          </div>
+            </div>
 
           {/* Avatar / Accent Card */}
           <div className="relative">
@@ -578,16 +575,27 @@ export default function Portfolio() {
             {/* Image Card */}
             <div className="rounded-2xl border border-slate-700 p-5 h-[28rem] md:h-[24rem] flex flex-col">
               <div className="font-semibold mb-2">Robotics World Championship Winner</div>
-              <p className="text-slate-300 mb-4">Jackson High School team coverage.</p>
+              <p className="text-slate-300 mb-4"> Winner of World Championship : Jack in Bot (2910)</p>
               <div className="flex-1 rounded-lg overflow-hidden">
                 <img src={`${import.meta.env.BASE_URL}images/JHS.png`} alt="JHS Robotics" className="w-full h-full object-cover" />
+              </div>
+            </div>
+
+            {/* FBLA Card */}
+            <div className="rounded-2xl border border-slate-700 p-5 h-[28rem] md:h-[24rem] flex flex-col">
+              <div className="font-semibold mb-2">FBLA</div>
+              <p className="text-slate-300 mb-4">FBLA Winner Award.</p>
+              <div className="flex-1 rounded-lg overflow-hidden">
+                <a href={`${import.meta.env.BASE_URL}images/FBLA.JPG`} target="_blank" rel="noreferrer">
+                  <img src={`${import.meta.env.BASE_URL}images/FBLA.JPG`} alt="FBLA" className="w-full h-full object-cover" />
+                </a>
               </div>
             </div>
 
             {/* Video Card */}
             <div className="rounded-2xl border border-slate-700 p-5 h-[28rem] md:h-[24rem] flex flex-col">
               <div className="font-semibold mb-2">Video / Article</div>
-+              <p className="text-slate-300 mb-4">Coverage about teen financial literacy.</p>
+              <p className="text-slate-300 mb-4">Coverage about teen financial literacy featured on Fox TV.</p>
               <div className="flex-1 rounded-lg overflow-hidden">
                 <iframe
                   scrolling="no"
@@ -603,11 +611,51 @@ export default function Portfolio() {
                 </a>
               </div>
             </div>
+            {/* Boeing Internship Card (match FBLA sizing, show full image) */}
+            <div className="rounded-2xl border border-slate-700 p-5 h-[28rem] md:h-[24rem] flex flex-col">
+              <div className="font-semibold mb-2">Boeing Internship</div>
+              <p className="text-slate-300 mb-4">Photos from the Boeing internship with my pictures featuring on Internship Completion Pamphlet.</p>
+              <div className="flex-1 rounded-lg overflow-hidden bg-slate-800 flex items-center justify-center p-2">
+                <div className="flex w-full h-full gap-2">
+                  <a href={`${import.meta.env.BASE_URL}images/Boeing Img1.jpg`} target="_blank" rel="noreferrer" className="flex-1 flex items-center justify-center bg-slate-900 p-2">
+                    <img src={`${import.meta.env.BASE_URL}images/Boeing Img1.jpg`} alt="Boeing Img1" className="max-w-full max-h-full object-contain" />
+                  </a>
+                  <a href={`${import.meta.env.BASE_URL}images/Boeing Img2.jpg`} target="_blank" rel="noreferrer" className="flex-1 flex items-center justify-center bg-slate-900 p-2">
+                    <img src={`${import.meta.env.BASE_URL}images/Boeing Img2.jpg`} alt="Boeing Img2" className="max-w-full max-h-full object-contain" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Quadrant Internship Card (match FBLA sizing, show full image) */}
+            <div className="rounded-2xl border border-slate-700 p-5 h-[28rem] md:h-[24rem] flex flex-col">
+              <div className="font-semibold mb-2">Quadrant Internship</div>
+              <p className="text-slate-300 mb-4">Certificate after completing Software Engineer Internship at Quadrant Technologies.</p>
+              <div className="flex-1 rounded-lg overflow-hidden bg-slate-800 flex items-center justify-center">
+                <a href={`${import.meta.env.BASE_URL}images/Quadrant.jpg`} target="_blank" rel="noreferrer" className="w-full h-full block">
+                  <img src={`${import.meta.env.BASE_URL}images/Quadrant.jpg`} alt="Quadrant Certificate" className="max-w-full max-h-full object-contain mx-auto" />
+                </a>
+              </div>
+            </div>
+
+            {/* ICDC Card (full-size image) */}
+            <div className="rounded-2xl border border-slate-700 p-5 h-[28rem] md:h-[24rem] flex flex-col">
+              <div className="font-semibold mb-2">ICDC</div>
+              <p className="text-slate-300 mb-4">Competing in Financial Literacy Project at DECA International Career Development (ICDC) .</p>
+              <div className="flex-1 rounded-lg overflow-hidden">
+                <div className="aspect-[16/10] relative">
+                  <a href={`${import.meta.env.BASE_URL}images/ICDC.jpeg`} target="_blank" rel="noreferrer" className="absolute inset-0">
+                    <img src={`${import.meta.env.BASE_URL}images/ICDC.jpeg`} alt="ICDC DECA" className="w-full h-full object-cover" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
           </div>
+
         </Section>
-+
-+
-+        <footer className="py-12 text-center text-sm text-slate-500">
+
+        <footer className="py-12 text-center text-sm text-slate-500">
           <div className="flex justify-center gap-4 mb-3">
             <a className="hover:opacity-80" href={PROFILE.links.github} target="_blank" rel="noreferrer"><Github className="inline size-5"/></a>
             <a className="hover:opacity-80" href={PROFILE.links.linkedin} target="_blank" rel="noreferrer"><Linkedin className="inline size-5"/></a>
