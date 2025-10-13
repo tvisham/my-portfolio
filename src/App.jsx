@@ -15,29 +15,40 @@ import {
   Sparkles,
 } from "lucide-react";
 
+// Minimal profile data used throughout the app. Add or update fields as needed.
 const PROFILE = {
   name: "Tvisha Mishra",
-  role: "High School Senior • Aspiring Innovator",
-  location: "Bothell, WA",
-  email: "tvisha0913@outlook.com",
-  bio: `Curiosity-driven student passionate about turning complex questions into human-centered solutions.`,
+  role: "High School Student & Aspiring Engineer",
+  bio: "I build projects in software and robotics. Interested in ML, embedded systems, and web development.",
+  location: "Seattle, WA",
+  email: "tvisham@example.com",
   links: {
     github: "https://github.com/tvisham",
-    linkedin: "https://www.linkedin.com/in/tvishamishra/",
-    
+    linkedin: "https://www.linkedin.com/in/tvisham/",
   },
 };
 
 const PROJECTS = [
   {
     title: "Air Quality Analysis - NYC",
-    blurb: "Acomprehensive analysis of air quality trends in New York City.",
+    blurb: "A comprehensive analysis of air quality trends in New York City.",
     tags: ["Python", "Pandas", "matplotlib", "seaborn", "geopandas"],
     img: "Air-Quality.png",
     fit: "cover",
     links: {
       live: "https://github.com/tvisham/Air-Quality-Data-Science",
       repo: "https://github.com/tvisham/Air-Quality-Data-Science",
+    },
+  },
+  {
+    title: "Golden Nest — Retirement Wizard",
+    blurb: "A retirement planning app that helps you estimate how much you'll need to save for retirement.",
+    tags: ["React", "TypeScript", "Redux", "Tailwind"],
+    img: "Golden-Nest.png",
+    fit: "cover",
+    links: {
+      live: "https://github.com/tvisham/golden-nest",
+      repo: "https://github.com/tvisham/golden-nest",
     },
   },
   {
@@ -53,7 +64,7 @@ const PROJECTS = [
   },
   {
     title: "not-due-yet",
-    blurb: "A assignment tracker with class management, subtasks, priorities, and calendar view.",
+    blurb: "An assignment tracker with class management, subtasks, priorities, and calendar view.",
     tags: ["HTML", "CSS", "JavaScript"],
     img: "not-due-yet.png",
     fit: "cover",
@@ -62,26 +73,45 @@ const PROJECTS = [
       repo: "https://github.com/tvisham/notdueyet",
     },
   },
-<<<<<<< HEAD
   {
     title: "Mario Game",
     blurb: "A fun and interactive Mario game built with Python",
-    tags: ["Python", "Pygame","pytmx"],
+    tags: ["Python", "Pygame", "pytmx"],
     img: "Mario.png",
-=======
-    {
-    title: "Golden Nest — Retirement Wizard",
-    blurb: "A retirement planning app that helps you estimate how much you'll need to save for retirement.",
-    tags: ["React", "TypeScript", "Redux", "Tailwind"],
-    img: "Golden-Nest.png",
->>>>>>> 41f18cb66f84d9059ab5713604e40606801a604c
     fit: "cover",
     links: {
-      live: "https://github.com/tvisham/golden-nest",
-      repo: "https://github.com/tvisham/golden-nest",
+      live: "https://github.com/tvisham/mario-in-python",
+      repo: "https://github.com/tvisham/mario-in-python",
+    },
+  },
+  {
+    title: "Ask Me Anything",
+    blurb: "A chat-bot with interactive front-end and back-end",
+    tags: ["JavaScript", "React", "Node.js"],
+    img: null,
+    fit: "cover",
+    links: {
+      live: "https://github.com/tvisham/ask-me-anything",
+      repo: "https://github.com/tvisham/ask-me-anything",
+    },
+  },
+  {
+    title: "ML Algorithm for a Vacuum Robot based on changes in environmental conditions and battery efficiency",
+    blurb: "Research project applying ML to battery and environmental data.",
+    tags: ["Machine Learning", "Azure", "Python", "Robotics"],
+    img: null,
+    details: [
+      "Developed a machine learning algorithm using Azure Machine Learning and Python to detect changes in environmental conditions based on battery efficiency in vacuum robots.",
+      "Analyzed correlations and identified patterns between fluctuations in battery performance and environmental factors such as temperature or terrain.",
+      "Presented findings in a research paper, detailing the algorithm's potential applications and insights in robotics and environmental monitoring.",
+    ],
+    links: {
+      live: "",
+      repo: "",
     },
   },
 ];
+
 
 const EXPERIENCE = [
   {
