@@ -397,7 +397,12 @@ export default function Portfolio() {
               <div className="rounded-3xl bg-slate-900 p-8 h-full">
                 <div className="aspect-[4/3] rounded-2xl grid place-content-center border border-slate-700">
                   <div className="text-center">
-                    <div className="mx-auto size-24 rounded-full bg-gradient-to-br from-indigo-500/80 to-purple-500/80 mb-4" />
+                    {/* Secret portfolio image - kept in public/images/Secrets and ignored by git */}
+                    <img
+                      src={`${import.meta.env.BASE_URL}images/Secrets/Portfolio.JPG`}
+                      alt="Private Portfolio"
+                      className="mx-auto w-32 h-32 rounded-full object-cover mb-4"
+                    />
                     <div className="text-lg font-semibold">{PROFILE.name}</div>
                     <div className="text-sm text-slate-400">{PROFILE.role}</div>
                   </div>
