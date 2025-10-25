@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap location (updated to repository homepage). Replace if you host at a different domain.
+Sitemap: https://tvisham.github.io/my-portfolio/sitemap.xml
