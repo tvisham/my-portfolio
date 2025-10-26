@@ -399,7 +399,7 @@ export default function Portfolio() {
                   <div className="text-center">
                     {/* Secret portfolio image - kept in public/images/Secrets and ignored by git */}
                     <img
-                      src={`${import.meta.env.BASE_URL}images/Secrets/Portfolio.JPG`}
+                      src={encodeURI(`${import.meta.env.BASE_URL}images/Secrets/Portfolio.JPG`)}
                       alt="Private Portfolio"
                       className="mx-auto w-32 h-32 rounded-full object-cover mb-4"
                     />
@@ -444,7 +444,7 @@ export default function Portfolio() {
                       {p.img ? (
                         <div className="aspect-[16/10] relative">
                           <img
-                            src={`${import.meta.env.BASE_URL}images/${p.img}`}
+                            src={encodeURI(`${import.meta.env.BASE_URL}images/Secrets/${p.img}`)}
                             alt={p.title}
                             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                           />
@@ -582,7 +582,7 @@ export default function Portfolio() {
               <div className="font-semibold mb-2">Robotics World Championship Winner</div>
               <p className="text-slate-300 mb-4"> Winner of World Championship : Jack in Bot (2910)</p>
               <div className="flex-1 rounded-lg overflow-hidden">
-                <img src={`${import.meta.env.BASE_URL}images/JHS.png`} alt="JHS Robotics" className="w-full h-full object-cover" />
+                <img src={encodeURI(`${import.meta.env.BASE_URL}images/Secrets/JHS.png`)} alt="JHS Robotics" className="w-full h-full object-cover" />
               </div>
             </div>
 
@@ -591,8 +591,8 @@ export default function Portfolio() {
               <div className="font-semibold mb-2">FBLA</div>
               <p className="text-slate-300 mb-4">FBLA Winner Award.</p>
               <div className="flex-1 rounded-lg overflow-hidden">
-                <a href={`${import.meta.env.BASE_URL}images/FBLA.JPG`} target="_blank" rel="noreferrer">
-                  <img src={`${import.meta.env.BASE_URL}images/FBLA.JPG`} alt="FBLA" className="w-full h-full object-cover" />
+                <a href={encodeURI(`${import.meta.env.BASE_URL}images/Secrets/FBLA.JPG`)} target="_blank" rel="noreferrer">
+                  <img src={encodeURI(`${import.meta.env.BASE_URL}images/Secrets/FBLA.JPG`)} alt="FBLA" className="w-full h-full object-cover" />
                 </a>
               </div>
             </div>
@@ -622,11 +622,11 @@ export default function Portfolio() {
               <p className="text-slate-300 mb-4">Photos from the Boeing internship with my pictures featuring on Internship Completion Pamphlet.</p>
               <div className="flex-1 rounded-lg overflow-hidden bg-slate-800 flex items-center justify-center p-2">
                 <div className="flex w-full h-full gap-2">
-                  <a href={`${import.meta.env.BASE_URL}images/Boeing Img1.jpg`} target="_blank" rel="noreferrer" className="flex-1 flex items-center justify-center bg-slate-900 p-2">
-                    <img src={`${import.meta.env.BASE_URL}images/Boeing Img1.jpg`} alt="Boeing Img1" className="max-w-full max-h-full object-contain" />
+                  <a href={encodeURI(`${import.meta.env.BASE_URL}images/Secrets/Boeing Img1.jpg`)} target="_blank" rel="noreferrer" className="flex-1 flex items-center justify-center bg-slate-900 p-2">
+                    <img src={encodeURI(`${import.meta.env.BASE_URL}images/Secrets/Boeing Img1.jpg`)} alt="Boeing Img1" className="max-w-full max-h-full object-contain" />
                   </a>
-                  <a href={`${import.meta.env.BASE_URL}images/Boeing Img2.jpg`} target="_blank" rel="noreferrer" className="flex-1 flex items-center justify-center bg-slate-900 p-2">
-                    <img src={`${import.meta.env.BASE_URL}images/Boeing Img2.jpg`} alt="Boeing Img2" className="max-w-full max-h-full object-contain" />
+                  <a href={encodeURI(`${import.meta.env.BASE_URL}images/Secrets/Boeing Img2.jpg`)} target="_blank" rel="noreferrer" className="flex-1 flex items-center justify-center bg-slate-900 p-2">
+                    <img src={encodeURI(`${import.meta.env.BASE_URL}images/Secrets/Boeing Img2.jpg`)} alt="Boeing Img2" className="max-w-full max-h-full object-contain" />
                   </a>
                 </div>
               </div>
@@ -637,8 +637,8 @@ export default function Portfolio() {
               <div className="font-semibold mb-2">Quadrant Internship</div>
               <p className="text-slate-300 mb-4">Certificate after completing Software Engineer Internship at Quadrant Technologies.</p>
               <div className="flex-1 rounded-lg overflow-hidden bg-slate-800 flex items-center justify-center">
-                <a href={`${import.meta.env.BASE_URL}images/Quadrant.jpg`} target="_blank" rel="noreferrer" className="w-full h-full block">
-                  <img src={`${import.meta.env.BASE_URL}images/Quadrant.jpg`} alt="Quadrant Certificate" className="max-w-full max-h-full object-contain mx-auto" />
+                <a href={encodeURI(`${import.meta.env.BASE_URL}images/Secrets/Quadrant.jpg`)} target="_blank" rel="noreferrer" className="w-full h-full block">
+                  <img src={encodeURI(`${import.meta.env.BASE_URL}images/Secrets/Quadrant.jpg`)} alt="Quadrant Certificate" className="max-w-full max-h-full object-contain mx-auto" />
                 </a>
               </div>
             </div>
@@ -649,8 +649,8 @@ export default function Portfolio() {
               <p className="text-slate-300 mb-4">Competing in Financial Literacy Project at DECA International Career Development (ICDC) .</p>
               <div className="flex-1 rounded-lg overflow-hidden">
                 <div className="aspect-[16/10] relative">
-                  <a href={`${import.meta.env.BASE_URL}images/ICDC.jpeg`} target="_blank" rel="noreferrer" className="absolute inset-0">
-                    <img src={`${import.meta.env.BASE_URL}images/ICDC.jpeg`} alt="ICDC DECA" className="w-full h-full object-cover" />
+                  <a href={encodeURI(`${import.meta.env.BASE_URL}images/Secrets/ICDC.jpeg`)} target="_blank" rel="noreferrer" className="absolute inset-0">
+                    <img src={encodeURI(`${import.meta.env.BASE_URL}images/Secrets/ICDC.jpeg`)} alt="ICDC DECA" className="w-full h-full object-cover" />
                   </a>
                 </div>
               </div>
