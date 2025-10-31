@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { Button } from "./components/ui/button";
 import { Badge } from "./components/ui/badge";
@@ -13,6 +13,10 @@ import {
   Briefcase,
   GraduationCap,
   Sparkles,
+  Menu,
+  X,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 
 // Minimal profile data used throughout the app. Add or update fields as needed.
@@ -21,7 +25,7 @@ const PROFILE = {
   role: "High School Student & Aspiring Engineer",
   bio: "I build projects in software and robotics. Interested in ML, embedded systems, and web development.",
   location: "Seattle, WA",
-  email: "tvisham@example.com",
+  email: "tvisham@notrealemail.com",
   links: {
     github: "https://github.com/tvisham",
     linkedin: "https://www.linkedin.com/in/tvisham/",
@@ -304,7 +308,7 @@ const fadeUp = {
 };
 
 const Section = ({ id, title, icon, children }) => (
-  <section id={id} className="scroll-mt-24 py-28">
+  <section id={id} className="scroll-mt-20 py-16">
     <motion.div {...fadeUp}>
       <div className="flex items-center gap-2 mb-8">
         {icon}
@@ -319,6 +323,8 @@ const Section = ({ id, title, icon, children }) => (
 export default function Portfolio() {
   const [query, setQuery] = useState("");
   const [activeTag, setActiveTag] = useState(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const projectsRef = useRef(null);
 
   const filtered = useMemo(() => {
     return PROJECTS.filter((p) => {
@@ -345,13 +351,35 @@ export default function Portfolio() {
             <a className="hover:opacity-80" href="#leadership">Leadership</a>
             <a className="hover:opacity-80" href="#awards">Awards</a>
           </nav>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              aria-label="Toggle menu"
+              aria-expanded={mobileOpen}
+              onClick={() => setMobileOpen((s) => !s)}
+              className="p-2 rounded-md bg-slate-800 hover:bg-slate-700"
+            >
+              {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+          </div>
+        </div>
+        {/* Mobile dropdown - small screens */}
+        <div className={`md:hidden px-4 ${mobileOpen ? 'block' : 'hidden'}`}>
+          <div className="mx-auto max-w-6xl py-2 flex flex-col gap-2">
+            <a onClick={() => setMobileOpen(false)} className="block py-2 px-3 rounded-lg hover:bg-slate-900" href="#projects">Projects</a>
+            <a onClick={() => setMobileOpen(false)} className="block py-2 px-3 rounded-lg hover:bg-slate-900" href="#experience">Experience</a>
+            <a onClick={() => setMobileOpen(false)} className="block py-2 px-3 rounded-lg hover:bg-slate-900" href="#education">Education</a>
+            <a onClick={() => setMobileOpen(false)} className="block py-2 px-3 rounded-lg hover:bg-slate-900" href="#leadership">Leadership</a>
+            <a onClick={() => setMobileOpen(false)} className="block py-2 px-3 rounded-lg hover:bg-slate-900" href="#awards">Awards</a>
+          </div>
         </div>
       </header>
 
       {/* Hero */}
       <main id="home" className="mx-auto max-w-6xl px-4">
         <motion.section
-          className="py-20 md:py-28 grid md:grid-cols-2 gap-14 items-center"
+          className="py-12 md:py-20 grid md:grid-cols-2 gap-10 items-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
@@ -434,8 +462,33 @@ export default function Portfolio() {
             </div>
           </div>
 
-          <div className="overflow-x-auto w-full -mx-4 px-4">
-            <div className="flex gap-8 items-stretch snap-x snap-mandatory">
+          <div className="w-full -mx-4 px-4">
+            {/* Mobile scroll controls + hint */}
+            <div className="flex items-center justify-between mb-2 md:hidden">
+              <div className="text-sm text-slate-400">Swipe to view more →</div>
+              <div className="flex gap-2">
+                <button
+                  aria-label="Scroll left"
+                  onClick={() => projectsRef.current?.scrollBy({ left: -300, behavior: 'smooth' })}
+                  className="p-2 rounded-md bg-slate-800 hover:bg-slate-700"
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                </button>
+                <button
+                  aria-label="Scroll right"
+                  onClick={() => projectsRef.current?.scrollBy({ left: 300, behavior: 'smooth' })}
+                  className="p-2 rounded-md bg-slate-800 hover:bg-slate-700"
+                >
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+            <div
+              ref={projectsRef}
+              className="overflow-x-auto w-full"
+              style={{ WebkitOverflowScrolling: 'touch' }}
+            >
+              <div className="flex gap-8 items-stretch snap-x snap-mandatory">
               {filtered.map((p) => (
                 <div key={p.title} className="flex-shrink-0 w-[22rem] h-[32rem] snap-start">
                   <div className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-6 h-full flex flex-col transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:shadow-2xl hover:shadow-indigo-500/10 hover:-translate-y-1">
@@ -497,6 +550,7 @@ export default function Portfolio() {
               ))}
             </div>
           </div>
+        </div>
         </Section>
 
         {/* Experience */}
@@ -660,7 +714,7 @@ export default function Portfolio() {
 
         </Section>
 
-        <footer className="py-12 text-center text-sm text-slate-500">
+  <footer className="py-8 text-center text-sm text-slate-500">
           <div className="flex justify-center gap-4 mb-3">
             <a className="hover:opacity-80" href={PROFILE.links.github} target="_blank" rel="noreferrer"><Github className="inline size-5"/></a>
             <a className="hover:opacity-80" href={PROFILE.links.linkedin} target="_blank" rel="noreferrer"><Linkedin className="inline size-5"/></a>
